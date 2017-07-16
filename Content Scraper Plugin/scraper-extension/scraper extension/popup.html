@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/styles.css"/>
+	<script src="libs/jquery-2.2.4.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="background.js"></script>
+	
+  </head>
+  <body>
+
+
+
+    <div class="container" style="min-width:400px;padding:10px">
+	<div id="snackbar"></div>
+	<table class="table">
+		<tr>
+			<td valign="center"><label >Mail To</label></td>
+			<td colspan="3"><input id="mailto" name="mailto" type="text" placeholder="Enter recipient email" class="form-control input-md"></td>
+		</tr>
+		<tr>
+			<td><label >Subject</label></td>
+			<td><input id="subject" name="subject" type="text" placeholder="Enter subject" class="form-control input-md"></td>
+		</tr>
+	</table>
+	
+	<div class="form-group" style="text-align:right">
+		<a data-toggle="collapse" data-target="#settings" style="text-decoration:none;cursor:pointer;">Settings</a>
+		<div id="settings" class="collapse">
+			<table class="table">
+				<tr>
+					<td><label >Api Url</label></td>
+					<td colspan="3"><input id="apiurl" name="apiurl" type="text" placeholder="Rest Api Url" class="form-control input-md"></td>
+				</tr>
+				<tr>
+					<td><label >Host</label></td>
+					<td><input id="host" name="host" type="text" placeholder="SMTP Host" class="form-control input-md"></td>
+					<td><label >Port</label></td>
+					<td><input id="port" name="port" type="number" class="form-control input-md"></td>
+					
+				</tr>
+				<tr>
+					<td><label >From Email</label></td>
+					<td colspan="3"><input id="fromemail" name="fromemail" type="text" placeholder="From Email" class="form-control input-md"></td>
+				</tr>
+				<tr>
+					<td><label >Username</label></td>
+					<td colspan="3"><input id="username" name="username" type="text" placeholder="Enter Email" class="form-control input-md"></td>
+				</tr>
+				<tr>
+					<td><label >Password</label></td>
+					<td colspan="3"><input id="password" name="password" type="password" placeholder="Enter Password" class="form-control input-md"></td>
+				</tr>
+				<tr>
+					<td><label >Security </label></td>
+					<td>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-sm btn-default security ssl">SSL</button>
+							<button type="button" class="btn btn-sm btn-success security tls">TLS</button>
+						</div>
+					</td>
+					
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div class="form-group">
+		<div class="col-md-8 col-md-offset-4">
+			<button class="btn btn-primary" id="mail">Send Mail</button>
+			<button class="btn btn-success" id="save">Save</button>
+			<button class="btn btn-default" id="cancel">Cancel</button>
+		</div>
+	</div>
+		
+		
+		
+	</div>
+  </body>
+</html>
+
