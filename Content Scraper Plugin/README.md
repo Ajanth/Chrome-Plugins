@@ -4,4 +4,6 @@ POC on interaction between the DOM and Chrome's plugin to scrape content from we
 
 Modify content.js to change what needs to be scraped.
 
+Uses Php Mailer api to send mails.
+
 
